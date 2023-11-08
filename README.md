@@ -38,9 +38,23 @@
 #####     Fájlok és könyvtárak összekombinálása
         `tar -czf archivum.tar.gz fajl1 fajl2 mappa1/`: Létrehoz egy tarballt több fájllal és könyvtárral.
 
-#####     Bőbeszédű Mód
-        `tar -cvzf archivum.tar.gz fajlok`: Verbózus módban hoz létre egy tarballt, megmutatva a hozzáadott fájlokat.
+#####     Verbose Mód
+        `tar -cvzf archivum.tar.gz fajlok`: Verbose módban hoz létre egy tarballt, megmutatva a hozzáadott fájlokat.
         tar -xvzf archivum.tar.gz: Verbózus módban csomagol ki.
 
 #####     Tar használata más parancsokkal
         `tar -czf - fajlok | ssh felhasznalo@hoszt 'cat > archivum.tar.gz'`: Létrehoz egy tarballt és átviszi SSH-n keresztül.
+        
+            Ezután titkosítsa a tar fájlt gpg használatával:
+
+gpg -c --cipher-algo AES256 fajlok.tar
+
+
+
+#####     Tar file jelszóval védése
+        `gpg -c --cipher-algo AES256 fajlok.tar` 
+
+#####     Tar file kicsomagolása és jelszavas titkosítás megszűntetése
+
+        `gpg -d fajlok.tar.gpg | tar xvf -`
+
