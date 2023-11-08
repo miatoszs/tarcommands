@@ -47,9 +47,9 @@
         tar -xJf archivum.tar.xz 
 
 ##     Jogosultságok megőrzése
-###### Ez a parancs jogosultságok megőrzése tarball létrehozásakor.
+###### Jogosultságok megőrzése tarball létrehozásakor.
         tar -pczf archivum.tar.gz mappa/ 
-###### Ez a parancs jogosultságok megőrzése kicsomagoláskor.
+###### Jogosultságok megőrzése kicsomagoláskor.
 
         tar -pxzf archivum.tar.gz 
 ##     Fájlok és könyvtárak összekombinálása
