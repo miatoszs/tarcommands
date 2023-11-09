@@ -113,11 +113,11 @@ Minden egyes opciót gyakran együtt használnak, hogy megadott műveleteket haj
 
 ### A .tar fájl egy archívum, amely több fájlt és könyvtárat tartalmaz egyetlen fájlban az egyszerűbb tárolás és szállítás érdekében. A .tar fájl nem tömörített, így gyorsan hozható létre és bontakoztatható ki, de nagyobb méretű lesz, mint a tömörített változatai.
 
-A .tar.gz egy gzip-pel tömörített tar archívum. Ez egy népszerű tömörítési forma Linux és Unix rendszerekben, mivel jól egyensúlyoz a tömörítés mértéke és a tömörítési/sebességi arány között.
+- A .tar.gz egy gzip-pel tömörített tar archívum. Ez egy népszerű tömörítési forma Linux és Unix rendszerekben, mivel jól egyensúlyoz a tömörítés mértéke és a tömörítési/sebességi arány - között.
 
-A .tar.bz2 egy bzip2-vel tömörített tar archívum, amely általában jobb tömörítést biztosít mint a .tar.gz, de több processzoridőt igényel a tömörítéshez és a kibontáshoz, tehát lassabb lehet.
+- A .tar.bz2 egy bzip2-vel tömörített tar archívum, amely általában jobb tömörítést biztosít mint a .tar.gz, de több processzoridőt igényel a tömörítéshez és a kibontáshoz, tehát lassabb lehet.
 
-A .tar.xz egy xz tömörítéssel rendelkező tar archívum, amely általában a legjobb tömörítési rátát biztosítja, de még több időt vehet igénybe a tömörítés és a kicsomagolás során.
+- A .tar.xz egy xz tömörítéssel rendelkező tar archívum, amely általában a legjobb tömörítési rátát biztosítja, de még több időt vehet igénybe a tömörítés és a kicsomagolás során.
 
 Összefoglalva:
 
