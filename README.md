@@ -108,7 +108,7 @@ A tarball olyan fájlok halmaza, amelyek egyetlen fájlba vannak csomagolva, maj
     gpg -c: GPG használata fájlok titkosítására.
     gpg -d: GPG használata titkosított fájlok dekódolására.
 
-Minden egyes opciót gyakran együtt használnak, hogy megadott műveleteket hajtsanak végre a tar archívumokkal.
+###### Minden egyes opciót gyakran együtt használnak, hogy megadott műveleteket hajtsanak végre a tar archívumokkal.
 ------------------------------------------------------------------------------------------------------------
 
 
