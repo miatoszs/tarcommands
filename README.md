@@ -76,3 +76,36 @@ A tarball olyan fájlok halmaza, amelyek egyetlen fájlba vannak csomagolva, maj
 
         gpg -d fajlok.tar.gpg | tar xvf -
 
+### Opció magyarázatok
+    -c: Create archive (archívum létrehozása).
+    -x: Extract files from archive (fájlok kicsomagolása az archívumból).
+    -t: List the contents of an archive (egy archívum tartalmának kilistázása).
+    -r: Append files to the end of an archive (fájlok hozzáfűzése egy archívum végéhez).
+    -u: Update files within an archive (fájlok frissítése egy archívumban).
+    -d: Delete from the archive (nem tömörített archívumból való törlés).
+
+###### A tömörítési módokat kiválasztó opciók:
+
+    -z: Use gzip to compress the tar file (gzip használata a tar fájl tömörítésére).
+    -j: Use bzip2 to compress the tar file (bzip2 használata a tar fájl tömörítésére).
+    -J: Use xz to compress the tar file (xz használata a tar fájl tömörítésére).
+
+###### További gyakran használt opciók:
+
+    -f: Specify the filename of the archive (megadja az archívum fájl nevét).
+    -v: Verbose mode; show progress (részletes mód; folyamat megjelenítése).
+    -p: Preserve permissions (jogosultságok megőrzése).
+    -C: Change to directory before performing any operations (műveletek előtt változtatja meg a munkakönyvtárat).
+
+###### Speciális használatokhoz szükséges opciók:
+
+    --wildcards: Use wildcard patterns (helyettesítő karakterek használata).
+    --delete: Delete files from the archive (fájlok törlése az archívumból, csak nem tömörített archívumok esetén).
+
+###### Ezen felül a következő speciális használatok is láthatók:
+
+    -c -f -: Az archívum létrehozása és a kimenet közvetlen átadása egy másik parancsnak (például SSH-n keresztül).
+    gpg -c: GPG használata fájlok titkosítására.
+    gpg -d: GPG használata titkosított fájlok dekódolására.
+
+Minden egyes opciót gyakran együtt használnak, hogy megadott műveleteket hajtsanak végre a tar archívumokkal.
