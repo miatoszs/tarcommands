@@ -109,6 +109,7 @@ A tarball olyan fájlok halmaza, amelyek egyetlen fájlba vannak csomagolva, maj
     gpg -d: GPG használata titkosított fájlok dekódolására.
 
 Minden egyes opciót gyakran együtt használnak, hogy megadott műveleteket hajtsanak végre a tar archívumokkal.
+------------------------------------------------------------------------------------------------------------
 
 
 ### A .tar fájl egy archívum, amely több fájlt és könyvtárat tartalmaz egyetlen fájlban az egyszerűbb tárolás és szállítás érdekében. A .tar fájl nem tömörített, így gyorsan hozható létre és bontakoztatható ki, de nagyobb méretű lesz, mint a tömörített változatai.
