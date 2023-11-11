@@ -73,6 +73,7 @@ A tarball olyan fájlok halmaza, amelyek egyetlen fájlba vannak csomagolva, maj
         gpg -c --cipher-algo AES256 fajlok.tar 
 
 ##     Tar file kicsomagolása és jelszavas titkosítás megszűntetése
+        gpg --decrypt fajlok.tar.gpg > fajlok.tar
 
         gpg -d fajlok.tar.gpg | tar xvf -
 
