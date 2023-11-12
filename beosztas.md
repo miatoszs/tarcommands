@@ -69,7 +69,7 @@ mindenki nézze át a saját parancsait, és tanulja meg hogy melyik opció mit 
         gpg --decrypt fajlok.tar.gpg > fajlok.tar.xz
 
         gpg -d fajlok.tar.gpg | tar xvf -
-        
+-------------------------------------------------------------------------------------------------        
 ### Opció magyarázatok
     -c: Create archive (archívum létrehozása).
     -x: Extract files from archive (fájlok kicsomagolása az archívumból).
