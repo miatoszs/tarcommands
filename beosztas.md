@@ -1,33 +1,27 @@
 
 ### Beosztás:
 a beosztást próbáltam igazségosan létrehozni, ha a neved alatt több parancsot látsz mint a többieknél, az azért lehet mert a ő parancsaik bonyolultabbak.
+mindenki nézze át a saját parancsait, és tanulja meg hogy melyik opció mit csinál, pl:  `tar -czf archivum.tar.gz fajlok` `c`: archívum létrehozása `z`:gzip használata a tar fájl tömörítésére (ezért lesz a vége .tar.gz) `f`: megadja az archívum fájl nevét
+
 
 # igazi Andor
 ##     Tarball létrehozása
 ###### Ez a parancs létrehoz egy archivum.tar nevű tarballt, amely tartalmazza a fajlok-at.
         tar -cf archivum.tar fajlok 
-
-##     Tarball tartalmának megtekintése
-###### Ez a parancs kilistázza az archivum.tar tartalmát kicsomagolás nélkül.
-        tar -tf archivum.tar 
-
-##     Fájlok kicsomagolása
 ######  Ez a parancs kicsomagolja az összes fájlt az archivum.tar-ból.
         tar -xf archivum.tar
+### A következő parancsok nem csak .tar-nál működnek hanem ezeknél is |.tar.gz|.tar.bz2|.tar.xz|
+
+###### Ez a parancs kilistázza az archivum.tar tartalmát kicsomagolás nélkül.
+        tar -tf archivum.tar 
 ###### Ez a parancs kicsomagol egy adott könyvtárba.
         tar -xf archivum.tar -C /elérési/út/mappa
 ###### Ez a parancs csak a .txt fájlokat csomagolja ki.
         tar -xf archivum.tar --wildcards '*.txt' 
-
-##     Fájlok hozzáadása egy tarballhoz
 ###### Ez a parancs hozzáad egy ujfajl-t a meglévő archivum.tar-hoz.
         tar -rf archivum.tar ujfajl 
-
-##     Fájlok frissítése egy tarballban
 ###### Ez a parancs frissíti a frissitendo fájlt az archivum.tar-ban, ha az megváltozott.
         tar -uf archivum.tar frissitendo 
-
-##     Fájlok törlése egy tarballból
 ###### Ez a parancs töröl egy torlendo fájlt az archivum.tar-ból (csak nem tömörített archívumoknál működik).
         tar --delete -f archivum.tar torlendo
 
@@ -39,17 +33,13 @@ a beosztást próbáltam igazségosan létrehozni, ha a neved alatt több paranc
         tar -czf archivum.tar.gz fajlok
 ###### Ez kicsomagol egy .gz tömörítésű tarballt.
         tar -xzf archivum.tar.gz 
-##     Jogosultságok megőrzése
+### A következő parancsok nem csak .tar.gz-nél működnek hanem ezeknél is |.tar|.tar.bz2|.tar.xz|
 ###### Jogosultságok megőrzése tarball létrehozásakor.
         tar -pczf archivum.tar.gz mappa/ 
 ###### Jogosultságok megőrzése kicsomagoláskor.
-
         tar -pxzf archivum.tar.gz 
-##     Fájlok és könyvtárak összekombinálása
 ###### Ez a parancs létrehoz egy tarballt több fájllal és könyvtárral.
-
         tar -czf archivum.tar.gz fajl1 fajl2 mappa1/ 
-##     Verbose Mód
 ###### Ez a parancs verbose módban hoz létre egy tarballt, megmutatva a hozzáadott fájlokat.
         tar -cvzf archivum.tar.gz fajlok 
 ###### Ez Verbose módban csomagol ki.
@@ -61,6 +51,7 @@ a beosztást próbáltam igazségosan létrehozni, ha a neved alatt több paranc
         tar -cjf archivum.tar.bz2 mappa/ file
 ###### Ez kicsomagol egy .bz2 tömörítésű tarballt.
         tar -xjf archivum.tar.bz2
+### A következő parancsok nem csak .tar.bz2-nél működnek hanem ezeknél is |.tar.gz|.tar|.tar.xz|
 ###### Ez a parancs létrehoz egy tarballt és átviszi SSH-n keresztül.
         tar -cjf - fajlok | ssh felhasznalo@hoszt 'cat > archivum.tar.bz2' 
 
@@ -68,14 +59,13 @@ a beosztást próbáltam igazségosan létrehozni, ha a neved alatt több paranc
 
 ###### Ez tömörít XZ-vel.
         tar -cJf archivum.tar.xz mappa/
-
-
 ###### Ez kicsomagol egy .xz tömörítésű tarballt.
         tar -xJf archivum.tar.xz 
-##     Tar file jelszóval védése
+### A következő parancsok nem csak .tar.xz-nél működnek hanem ezeknél is |.tar.gz|.tar.bz2|.tar|
+######     Tar file jelszóval védése
         gpg -c --cipher-algo AES256 fajlok.tar.xz
 
-##     Tar file kicsomagolása és jelszavas titkosítás megszűntetése
+######     Tar file kicsomagolása és jelszavas titkosítás megszűntetése
         gpg --decrypt fajlok.tar.gpg > fajlok.tar.xz
 
         gpg -d fajlok.tar.gpg | tar xvf -
