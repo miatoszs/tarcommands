@@ -10,7 +10,7 @@ mindenki nézze át a saját parancsait, és tanulja meg hogy melyik opció mit 
         tar -cf archivum.tar fajlok 
 ######  Ez a parancs kicsomagolja az összes fájlt az archivum.tar-ból.
         tar -xf archivum.tar
-### A következő parancsok nem csak .tar-nál működnek hanem ezeknél is |.tar.gz|.tar.bz2|.tar.xz|
+### A következő parancsok nem csak .tar-nál működnek hanem ezeknél is |.tar.gz|.tar.bz2|.tar.xz| (csak természetesen más opciókat kell megadni)
 
 ###### Ez a parancs kilistázza az archivum.tar tartalmát kicsomagolás nélkül.
         tar -tf archivum.tar 
@@ -33,7 +33,7 @@ mindenki nézze át a saját parancsait, és tanulja meg hogy melyik opció mit 
         tar -czf archivum.tar.gz fajlok
 ###### Ez kicsomagol egy .gz tömörítésű tarballt.
         tar -xzf archivum.tar.gz 
-### A következő parancsok nem csak .tar.gz-nél működnek hanem ezeknél is |.tar|.tar.bz2|.tar.xz|
+### A következő parancsok nem csak .tar.gz-nél működnek hanem ezeknél is |.tar|.tar.bz2|.tar.xz| (csak természetesen más opciókat kell megadni)
 ###### Jogosultságok megőrzése tarball létrehozásakor.
         tar -pczf archivum.tar.gz mappa/ 
 ###### Jogosultságok megőrzése kicsomagoláskor.
@@ -51,7 +51,7 @@ mindenki nézze át a saját parancsait, és tanulja meg hogy melyik opció mit 
         tar -cjf archivum.tar.bz2 mappa/ file
 ###### Ez kicsomagol egy .bz2 tömörítésű tarballt.
         tar -xjf archivum.tar.bz2
-### A következő parancsok nem csak .tar.bz2-nél működnek hanem ezeknél is |.tar.gz|.tar|.tar.xz|
+### A következő parancsok nem csak .tar.bz2-nél működnek hanem ezeknél is |.tar.gz|.tar|.tar.xz| (csak természetesen más opciókat kell megadni)
 ###### Ez a parancs létrehoz egy tarballt és átviszi SSH-n keresztül.
         tar -cjf - fajlok | ssh felhasznalo@hoszt 'cat > archivum.tar.bz2' 
 
@@ -61,7 +61,7 @@ mindenki nézze át a saját parancsait, és tanulja meg hogy melyik opció mit 
         tar -cJf archivum.tar.xz mappa/
 ###### Ez kicsomagol egy .xz tömörítésű tarballt.
         tar -xJf archivum.tar.xz 
-### A következő parancsok nem csak .tar.xz-nél működnek hanem ezeknél is |.tar.gz|.tar.bz2|.tar|
+### A következő parancsok nem csak .tar.xz-nél működnek hanem ezeknél is |.tar.gz|.tar.bz2|.tar| (csak természetesen más opciókat kell megadni)
 ######     Tar file jelszóval védése
         gpg -c --cipher-algo AES256 fajlok.tar.xz
 
