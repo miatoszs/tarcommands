@@ -66,9 +66,9 @@ mindenki nézze át a saját parancsait, és tanulja meg hogy melyik opció mit 
         gpg -c --cipher-algo AES256 fajlok.tar.xz
 
 ######     Tar file kicsomagolása és jelszavas titkosítás megszűntetése
-        gpg --decrypt fajlok.tar.gpg > fajlok.tar.xz
+        gpg --decrypt fajlok.tar.xz.gpg > fajlok.tar.xz
 
-        gpg -d fajlok.tar.gpg | tar xvf -
+        gpg -d fajlok.tar.xz.gpg | tar xJf -
 -------------------------------------------------------------------------------------------------        
 ### Opció magyarázatok
     -c: Create archive (archívum létrehozása).
