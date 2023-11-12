@@ -54,7 +54,8 @@ mindenki nézze át a saját parancsait, és tanulja meg hogy melyik opció mit 
 ### A következő parancsok nem csak .tar.bz2-nél működnek hanem ezeknél is |.tar.gz|.tar|.tar.xz| (csak természetesen más opciókat kell megadni)
 ###### Ez a parancs létrehoz egy tarballt és átviszi SSH-n keresztül.
         tar -cjf - fajlok | ssh felhasznalo@hoszt 'cat > archivum.tar.bz2' 
-
+Cao ez egy nehéz parancs, itt van hozzá egy kis magyarázat:
+`tar -cjf - fajlok`: Ez a rész egy tar archívumot hoz létre a fajlok nevű könyvtárból vagy fájlokból. A `-c` kapcsoló új archívumot hoz létre, a `-j` kapcsoló BZip2 tömörítést használ, a `-f` - pedig azt jelzi, hogy a kimenetet a standard kimenetre (stdout) írja, nem egy fizikai fájlba. `|`: Ez a csővezeték (pipe) szimbólum, ami átirányítja az első parancs kimenetét (a tar által létrehozott archívumot) a következő parancs bemenetébe. `ssh felhasznalo@hoszt 'cat > archivum.tar.bz2'`: Ez a rész egy távoli gépre (hoszt) történő SSH kapcsolatot létesít a megadott felhasznalo felhasználói névvel. A kapcsolat létrejötte után a cat > archivum.tar.bz2 parancsot hajtja végre a távoli gépen. Ez a parancs a cat programot használja arra, hogy az SSH-n keresztül érkező adatot (amit a tar és a csővezeték küld) egy archivum.tar.bz2 nevű fájlba írja a távoli gépen. Összességében ez a parancs egy helyi könyvtár vagy fájlok tömörített archívumát hozza létre, majd ezt az archívumot átküldi egy távoli gépre SSH-n keresztül, ahol egy új .tar.bz2 fájlként menti el. Ez egy hatékony módja a nagyobb fájlok vagy könyvtárak biztonságos átvitelének egyik gépről a másikra.
 # Péter
 
 ###### Ez tömörít XZ-vel.
