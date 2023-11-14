@@ -4,7 +4,7 @@ a beosztást próbáltam igazségosan létrehozni, ha a neved alatt több paranc
 mindenki nézze át a saját parancsait, és tanulja meg hogy melyik opció mit csinál, pl:  `tar -czf archivum.tar.gz fajlok` `c`: archívum létrehozása `z`:gzip használata a tar fájl tömörítésére (ezért lesz a vége .tar.gz) `f`: megadja az archívum fájl nevét
 
 
-# igazi Andor
+# sima Andor
 ##     Tarball létrehozása
 ###### Ez a parancs létrehoz egy archivum.tar nevű tarballt, amely tartalmazza a fajlok-at.
         tar -cf archivum.tar fajlok 
