@@ -1,4 +1,4 @@
-# tarcommands
+# tarc ommands
 összegyűjtöttem egy csomó tar parancsot, remélem ez elég lesz, de majd szombaton kidolgozzuk és megcsináljuk a prezentációt.
 ### Mi az a tarball:
 A tarball olyan fájlok halmaza, amelyek egyetlen fájlba vannak csomagolva, majd tömörítve
